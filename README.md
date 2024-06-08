@@ -7,57 +7,11 @@ Frontend(URL): https://gts-beta.vercel.app/
 
 Note: First open the backend URL after backend URL open completely then after open frontend URL so that the application will run smoothly.
 
-**Project Structure:** 
-
-**Backend project Structure**
-
-•	config: data base connection
-
-•	controller: all the logic for the routes
-
-•	helpers: logic for the hashing password and comparing password
-
-•	middleware: Token verification
-
-•	models: mongoose schemas and model
-
-•	routes: endpoints for the function
-
-•	server.js: Entry point for the backend server
-
-
-**Frontend project Structure**
-
-•	public: Static file such as index.html
-
-•	src: source code for the react application.
-
-•	components: reusable components 
-
-•	Admin: Displaying the user information for the admin only
-
-•	Auth:  Authenticated the user information
-
-•	Layout: Link for the navigation
-
-•	Pages: Components for the different pages
-
-•	context: creating the context API so that the information present in context API can access all the files.
-
-•	App.js: Main page for the react routing 
-
-•	Index.css: Designing the webpages.
-
-•	Index.js : Entry point for the react application.
-
-
 **Running the project Locally**
 
 **Prerequisites:**
 
 •	Node.js Installed
-
-•	MongoDB installed and running
 
 
 **Backend Setup**
