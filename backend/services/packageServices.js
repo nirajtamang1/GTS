@@ -10,6 +10,7 @@ const courierCharge = [
 const getCourierPrice = (weight) => {
   for (let i = 0; i < courierCharge.length; i++) {
     if (courierCharge[i].maxWeight >= weight) {
+      console.log(courierCharge[i].charge);
       return courierCharge[i].charge;
     }
   }
@@ -23,24 +24,22 @@ export const createPackages = (products) => {
     items: [],
     totalWeight: 0,
     totalPrice: 0,
-    courierPrice: 0,
   };
 
   products.forEach((product) => {
     if (currentPackage.totalPrice + product.price > 250) {
-        // Create the new package if the amount is more than 250
+      // Create the new package if the amount is more than 250
       packages.push(currentPackage);
       currentPackage = {
         items: [],
         totalWeight: 0,
         totalPrice: 0,
-        courierPrice: 0,
       };
     }
     currentPackage.items.push(product.name);
     currentPackage.totalWeight += product.weight;
     currentPackage.totalPrice += product.price;
-    currentPackage.courierPrice += getCourierPrice(product.weight);
+    currentPackage.courierPrice = getCourierPrice(currentPackage.totalWeight);
   });
 
   //push the last packages
