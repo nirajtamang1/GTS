@@ -1,4 +1,4 @@
-**User Authentication System**
+**Package Management System**
 
 Backend(URL): https://gts-2.onrender.com/
 
